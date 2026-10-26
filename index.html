@@ -125,7 +125,7 @@
         }
 
         // 3. Desbloquear audio de videos
-        videos.forEach(v =>.
+        videos.forEach(v => {
           v.muted = false;
           v.play().then(() => { v.pause(); v.currentTime = 0; }).catch(e => console.log("Audio waiting..."));
         });
